@@ -1,8 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     <title>
 
@@ -56,10 +59,28 @@
             
     </span>
 </div>
+
+
+{% if messages %}
+<ul>
+    
+    {% for message in messages  %}
+    <li id="msg">{{message | safe}}
+        <a href="" class="close" onclick="">x</a>
+    </li>
+        
+    {% endfor %}
+        
+</ul>
+    
+{% endif %}
+    
         
     {% block content %}
         
     {% endblock content %}
-        
+ 
+    
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
