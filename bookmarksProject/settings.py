@@ -130,6 +130,7 @@ AUTHENTICATION_BACKENDS =[
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
 ]
 
 LOGIN_REDIRECT_URL = 'dashboard'
@@ -144,5 +145,8 @@ MEDIA_ROOT= BASE_DIR / 'media'
 SOCIAL_AUTH_FACEBOOK_KEY = '1504013077203108'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'd97c2e1e3bad2ac446ca3980daeceaa8'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_TWITTER_KEY = 'm7Os1KvmbKRSGQ4RBnkLYw2v7'
+SOCIAL_AUTH_TWITTER_SECRET = '8TLKBDki8PLpP6M6jWMfgYjEA8HNTOl2fcEyuZQzRswO8HSkZj'
 
 
