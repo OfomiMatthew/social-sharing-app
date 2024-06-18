@@ -32,6 +32,14 @@
         <a href="{% url 'password_reset' %}">Forgotten Password ?</a>
     </p>
 </div>
+
+<div class="social login">
+<ul>
+    <li>
+        <a href="{% url 'social:begin' 'facebook' %}">Sign in with Facebook</a>
+    </li>
+</ul>
+</div>
     
     
 {% endblock content %}
